@@ -85,7 +85,7 @@ Please make sure that the directory structure of the dataset is arranged as foll
 
 ```
 MaskST
-		├── data
+    ├── data
       ├── object
       └── object_test
     ├── style_evaluation_benchmark_v2
