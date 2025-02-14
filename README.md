@@ -12,7 +12,7 @@ The official implementation of  Less is More: Masking Elements in Image Conditio
 
 ## Abstract
 
-Given a style-reference image as the additional image condition, text-to-image diffusion models have demonstrated impressive capabilities in generating images that possess the content of text prompts while adopting the visual style of the reference image. However, current state-of-the-art methods often struggle to disentangle content and style from style-reference images, leading to issues such as content leakages. To address this issue, we propose a masking-based method that efficiently decouples content from style without the need of tuning any model parameters. By simply masking specific elements in the style reference’s image features, we uncover a critical yet under-explored principle: guiding with appropriatelyselected fewer conditions (e.g., dropping several image feature elements) can efficiently avoid unwanted content flowing into the diffusion models, enhancing the style transfer performances of text-to-image diffusion models. In this paper, we validate this finding both theoretically and experimentally. Extensive experiments across various styles demonstrate the effectiveness of our masking-based method and support our theoretical results.
+Given a style-reference image as the additional image condition, text-to-image diffusion models have demonstrated impressive capabilities in generating images that possess the content of text prompts while adopting the visual style of the reference image. However, current state-of-the-art methods often struggle to disentangle content and style from style-reference images, leading to issues such as content leakages. To address this issue, we propose a masking-based method that efficiently decouples content from style without the need of tuning any model parameters. By simply masking specific elements in the style reference’s image features, we uncover a critical yet under-explored principle: guiding with appropriately selected fewer conditions (e.g., dropping several image feature elements) can efficiently avoid unwanted content flowing into the diffusion models, enhancing the style transfer performances of text-to-image diffusion models. In this paper, we validate this finding both theoretically and experimentally. Extensive experiments across various styles demonstrate the effectiveness of our masking-based method and support our theoretical results.
 
 ## Demos
 
@@ -153,7 +153,7 @@ Inference on stylebench:
 ###################### StyleShot's style encoder ###################
 # style transfer using StyleShot
 python styleshot_text_driven_exp2.py --output outputs_exp2 --method styleshot 
-# style transfer using Instantstyle's feature substraction
+# style transfer using Instantstyle's feature subtraction
 python styleshot_text_driven_exp2.py --output outputs_exp2 --method instantstyle 
 # style transfer using our proposed masking method
 python styleshot_text_driven_exp2.py --output outputs_exp2 --method ours --less_condition
@@ -189,7 +189,7 @@ Image-driven style transfer
 ###################### StyleShot's style encoder ###################
 # style transfer using StyleShot
 python styleshot_image_driven.py --output outputs_image_driven --method styleshot 
-# style transfer using Instantstyle's feature substraction
+# style transfer using Instantstyle's feature subtraction
 python styleshot_image_driven.py --output outputs_image_driven --method instantstyle 
 # style transfer using our proposed masking method
 python styleshot_image_driven.py --output outputs_image_driven --method ours --less_condition
@@ -203,14 +203,11 @@ This work aims to make a positive impact on the field of AI-driven image generat
 ## Citation
 If you use this code in your research, please kindly cite this paper:
 ```bibtex
-@article{zhu2025moremaskingelementsimage,
-      title={Less is More: Masking Elements in Image Condition Features Avoids Content Leakages in Style Transfer Diffusion Models}, 
-      author={Lin Zhu and Xinbing Wang and Chenghu Zhou and Qinying Gu and Nanyang Ye},
-      year={2025},
-      eprint={2502.07466},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.07466}, 
+@article{zhu2025less,
+  title={Less is More: Masking Elements in Image Condition Features Avoids Content Leakages in Style Transfer Diffusion Models},
+  author={Zhu, Lin and Wang, Xinbing and Zhou, Chenghu and Gu, Qinying and Ye, Nanyang},
+  journal={arXiv preprint arXiv:2502.07466},
+  year={2025}
 }
 ```
 
@@ -221,4 +218,4 @@ The code is built upon <a href='https://github.com/tencent-ailab/IP-Adapter'>IP-
 
 ## Contact ✉️
 
-If you have any question about this project, please feel free to contact [zhulin_sjtu@sjtu.edu.cn](mailto:zhulin_sjtu@sjtu.edu.cn).
+If you have any questions about this project, please feel free to contact [zhulin_sjtu@sjtu.edu.cn](mailto:zhulin_sjtu@sjtu.edu.cn).
