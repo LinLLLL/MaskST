@@ -1,4 +1,4 @@
-# __***Less is More: Masking Elements in Image Condition Features Avoids Content Leakages in Style Transfer Diffusion Models***__
+# __***Less is More: Masking Elements in Image Condition Features Avoids Content Leakages in Style Transfer Diffusion Models (ICLR2025)***__
 
 <div align="center">
 _**Lin Zhu, Xinbing Wang, Chenghu Zhou, Qinying Gu, Nanyang Ye**_
